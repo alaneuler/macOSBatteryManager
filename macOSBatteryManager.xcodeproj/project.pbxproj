@@ -11,7 +11,31 @@
 		7C984F1528FF7449003BD80F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C984F1428FF7449003BD80F /* ViewController.swift */; };
 		7C984F1728FF7449003BD80F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C984F1628FF7449003BD80F /* Assets.xcassets */; };
 		7C984F1A28FF7449003BD80F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C984F1828FF7449003BD80F /* Main.storyboard */; };
+		7C984F2D28FF79C9003BD80F /* HelperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C984F2C28FF79C9003BD80F /* HelperProtocol.swift */; };
+		7C984F2E28FF79C9003BD80F /* HelperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C984F2C28FF79C9003BD80F /* HelperProtocol.swift */; };
+		7C984F3128FF7E17003BD80F /* PrivilegeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C984F3028FF7E17003BD80F /* PrivilegeHelper.swift */; };
+		7C984F3329000ECC003BD80F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C984F3229000ECC003BD80F /* Constants.swift */; };
+		7C984F3429000EE6003BD80F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C984F3229000ECC003BD80F /* Constants.swift */; };
+		7C984F362900125B003BD80F /* RemoteApplicationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C984F352900125B003BD80F /* RemoteApplicationProtocol.swift */; };
+		7C984F372900169D003BD80F /* RemoteApplicationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C984F352900125B003BD80F /* RemoteApplicationProtocol.swift */; };
+		7C984F3929001882003BD80F /* PrivilegeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C984F3829001882003BD80F /* PrivilegeHelper.swift */; };
+		7C984F45290033D8003BD80F /* me.alaneuler.mbm.PrivilegeHelper in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7C984F2528FF7551003BD80F /* me.alaneuler.mbm.PrivilegeHelper */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		7C984F472900C9BA003BD80F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7C984F462900C9BA003BD80F /* Info.plist */; };
+		7C984F492900D16E003BD80F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C984F2728FF7551003BD80F /* main.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7C984F44290033AE003BD80F /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LaunchServices;
+			dstSubfolderSpec = 1;
+			files = (
+				7C984F45290033D8003BD80F /* me.alaneuler.mbm.PrivilegeHelper in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		7C984F0F28FF7449003BD80F /* macOSBatteryManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = macOSBatteryManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -20,10 +44,27 @@
 		7C984F1628FF7449003BD80F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7C984F1928FF7449003BD80F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7C984F1B28FF7449003BD80F /* macOSBatteryManager.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOSBatteryManager.entitlements; sourceTree = "<group>"; };
+		7C984F2528FF7551003BD80F /* me.alaneuler.mbm.PrivilegeHelper */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = me.alaneuler.mbm.PrivilegeHelper; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C984F2728FF7551003BD80F /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		7C984F2C28FF79C9003BD80F /* HelperProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperProtocol.swift; sourceTree = "<group>"; };
+		7C984F3028FF7E17003BD80F /* PrivilegeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivilegeHelper.swift; sourceTree = "<group>"; };
+		7C984F3229000ECC003BD80F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		7C984F352900125B003BD80F /* RemoteApplicationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteApplicationProtocol.swift; sourceTree = "<group>"; };
+		7C984F3829001882003BD80F /* PrivilegeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivilegeHelper.swift; sourceTree = "<group>"; };
+		7C984F422900328B003BD80F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7C984F43290032A3003BD80F /* Launchd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Launchd.plist; sourceTree = "<group>"; };
+		7C984F462900C9BA003BD80F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		7C984F0C28FF7449003BD80F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7C984F2228FF7551003BD80F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -36,7 +77,9 @@
 		7C984F0628FF7449003BD80F = {
 			isa = PBXGroup;
 			children = (
+				7C984F2F28FF7C4E003BD80F /* Common */,
 				7C984F1128FF7449003BD80F /* macOSBatteryManager */,
+				7C984F2628FF7551003BD80F /* PrivilegeHelper */,
 				7C984F1028FF7449003BD80F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -45,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				7C984F0F28FF7449003BD80F /* macOSBatteryManager.app */,
+				7C984F2528FF7551003BD80F /* me.alaneuler.mbm.PrivilegeHelper */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -57,8 +101,31 @@
 				7C984F1628FF7449003BD80F /* Assets.xcassets */,
 				7C984F1828FF7449003BD80F /* Main.storyboard */,
 				7C984F1B28FF7449003BD80F /* macOSBatteryManager.entitlements */,
+				7C984F3829001882003BD80F /* PrivilegeHelper.swift */,
+				7C984F462900C9BA003BD80F /* Info.plist */,
 			);
 			path = macOSBatteryManager;
+			sourceTree = "<group>";
+		};
+		7C984F2628FF7551003BD80F /* PrivilegeHelper */ = {
+			isa = PBXGroup;
+			children = (
+				7C984F2728FF7551003BD80F /* main.swift */,
+				7C984F3028FF7E17003BD80F /* PrivilegeHelper.swift */,
+				7C984F422900328B003BD80F /* Info.plist */,
+				7C984F43290032A3003BD80F /* Launchd.plist */,
+			);
+			path = PrivilegeHelper;
+			sourceTree = "<group>";
+		};
+		7C984F2F28FF7C4E003BD80F /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				7C984F2C28FF79C9003BD80F /* HelperProtocol.swift */,
+				7C984F3229000ECC003BD80F /* Constants.swift */,
+				7C984F352900125B003BD80F /* RemoteApplicationProtocol.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,6 +138,7 @@
 				7C984F0B28FF7449003BD80F /* Sources */,
 				7C984F0C28FF7449003BD80F /* Frameworks */,
 				7C984F0D28FF7449003BD80F /* Resources */,
+				7C984F44290033AE003BD80F /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -80,6 +148,22 @@
 			productName = macOSBatteryManager;
 			productReference = 7C984F0F28FF7449003BD80F /* macOSBatteryManager.app */;
 			productType = "com.apple.product-type.application";
+		};
+		7C984F2428FF7551003BD80F /* me.alaneuler.mbm.PrivilegeHelper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7C984F2928FF7551003BD80F /* Build configuration list for PBXNativeTarget "me.alaneuler.mbm.PrivilegeHelper" */;
+			buildPhases = (
+				7C984F2128FF7551003BD80F /* Sources */,
+				7C984F2228FF7551003BD80F /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = me.alaneuler.mbm.PrivilegeHelper;
+			productName = PrivilegeHelper;
+			productReference = 7C984F2528FF7551003BD80F /* me.alaneuler.mbm.PrivilegeHelper */;
+			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
@@ -92,6 +176,9 @@
 				LastUpgradeCheck = 1400;
 				TargetAttributes = {
 					7C984F0E28FF7449003BD80F = {
+						CreatedOnToolsVersion = 14.0.1;
+					};
+					7C984F2428FF7551003BD80F = {
 						CreatedOnToolsVersion = 14.0.1;
 					};
 				};
@@ -110,6 +197,7 @@
 			projectRoot = "";
 			targets = (
 				7C984F0E28FF7449003BD80F /* macOSBatteryManager */,
+				7C984F2428FF7551003BD80F /* me.alaneuler.mbm.PrivilegeHelper */,
 			);
 		};
 /* End PBXProject section */
@@ -121,6 +209,7 @@
 			files = (
 				7C984F1728FF7449003BD80F /* Assets.xcassets in Resources */,
 				7C984F1A28FF7449003BD80F /* Main.storyboard in Resources */,
+				7C984F472900C9BA003BD80F /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,7 +221,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C984F1528FF7449003BD80F /* ViewController.swift in Sources */,
+				7C984F3929001882003BD80F /* PrivilegeHelper.swift in Sources */,
 				7C984F1328FF7449003BD80F /* AppDelegate.swift in Sources */,
+				7C984F372900169D003BD80F /* RemoteApplicationProtocol.swift in Sources */,
+				7C984F2D28FF79C9003BD80F /* HelperProtocol.swift in Sources */,
+				7C984F3429000EE6003BD80F /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7C984F2128FF7551003BD80F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C984F3128FF7E17003BD80F /* PrivilegeHelper.swift in Sources */,
+				7C984F492900D16E003BD80F /* main.swift in Sources */,
+				7C984F362900125B003BD80F /* RemoteApplicationProtocol.swift in Sources */,
+				7C984F2E28FF79C9003BD80F /* HelperProtocol.swift in Sources */,
+				7C984F3329000ECC003BD80F /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,10 +374,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOSBatteryManager/macOSBatteryManager.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = 644K7355LF;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = macOSBatteryManager/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -281,8 +390,10 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = me.alaneuler.macOSBatteryManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -294,10 +405,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOSBatteryManager/macOSBatteryManager.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = 644K7355LF;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = macOSBatteryManager/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -306,9 +421,63 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = me.alaneuler.macOSBatteryManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		7C984F2A28FF7551003BD80F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = 644K7355LF;
+				INFOPLIST_FILE = "$(SRCROOT)/PrivilegeHelper/Info.plist";
+				OTHER_LDFLAGS = (
+					"-sectcreate",
+					__TEXT,
+					__info_plist,
+					"\"$(SRCROOT)/PrivilegeHelper/Info.plist\"",
+					"-sectcreate",
+					__TEXT,
+					__launchd_plist,
+					"\"$(SRCROOT)/PrivilegeHelper/Launchd.plist\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.alaneuler.mbm.PrivilegeHelper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		7C984F2B28FF7551003BD80F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = 644K7355LF;
+				INFOPLIST_FILE = "$(SRCROOT)/PrivilegeHelper/Info.plist";
+				OTHER_LDFLAGS = (
+					"-sectcreate",
+					__TEXT,
+					__info_plist,
+					"\"$(SRCROOT)/PrivilegeHelper/Info.plist\"",
+					"-sectcreate",
+					__TEXT,
+					__launchd_plist,
+					"\"$(SRCROOT)/PrivilegeHelper/Launchd.plist\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.alaneuler.mbm.PrivilegeHelper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -330,6 +499,15 @@
 			buildConfigurations = (
 				7C984F1F28FF7449003BD80F /* Debug */,
 				7C984F2028FF7449003BD80F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7C984F2928FF7551003BD80F /* Build configuration list for PBXNativeTarget "me.alaneuler.mbm.PrivilegeHelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7C984F2A28FF7551003BD80F /* Debug */,
+				7C984F2B28FF7551003BD80F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
