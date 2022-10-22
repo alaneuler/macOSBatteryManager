@@ -458,4 +458,3 @@ if __name__ == "__main__":
         print("usage: %s check  /path/to/app" % os.path.basename(sys.argv[0]), file = sys.stderr)
         print("       %s setreq /path/to/app /path/to/app/Info.plist /path/to/tool/Info.plist..." % os.path.basename(sys.argv[0]), file = sys.stderr)
         sys.exit(1)
-        

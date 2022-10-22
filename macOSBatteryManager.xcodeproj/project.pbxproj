@@ -38,6 +38,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7C214FF42903763000B1B992 /* uninstall.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = uninstall.sh; sourceTree = "<group>"; };
+		7C214FF52903765700B1B992 /* SMJobBlessUtil3.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = SMJobBlessUtil3.py; sourceTree = "<group>"; };
 		7C984F0F28FF7449003BD80F /* macOSBatteryManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = macOSBatteryManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C984F1228FF7449003BD80F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7C984F1428FF7449003BD80F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +79,8 @@
 		7C984F0628FF7449003BD80F = {
 			isa = PBXGroup;
 			children = (
+				7C214FF52903765700B1B992 /* SMJobBlessUtil3.py */,
+				7C214FF42903763000B1B992 /* uninstall.sh */,
 				7C984F2F28FF7C4E003BD80F /* Common */,
 				7C984F1128FF7449003BD80F /* macOSBatteryManager */,
 				7C984F2628FF7551003BD80F /* PrivilegeHelper */,
