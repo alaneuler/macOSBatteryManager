@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C6A95AF29037816005CA509 /* SMC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6A95AE29037816005CA509 /* SMC.swift */; };
+		7C6A95B12903885A005CA509 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6A95B02903885A005CA509 /* main.swift */; };
 		7C984F1328FF7449003BD80F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C984F1228FF7449003BD80F /* AppDelegate.swift */; };
 		7C984F1528FF7449003BD80F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C984F1428FF7449003BD80F /* ViewController.swift */; };
 		7C984F1728FF7449003BD80F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C984F1628FF7449003BD80F /* Assets.xcassets */; };
-		7C984F1A28FF7449003BD80F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C984F1828FF7449003BD80F /* Main.storyboard */; };
 		7C984F2D28FF79C9003BD80F /* HelperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C984F2C28FF79C9003BD80F /* HelperProtocol.swift */; };
 		7C984F2E28FF79C9003BD80F /* HelperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C984F2C28FF79C9003BD80F /* HelperProtocol.swift */; };
 		7C984F3128FF7E17003BD80F /* PrivilegeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C984F3028FF7E17003BD80F /* PrivilegeHelper.swift */; };
@@ -40,11 +41,12 @@
 /* Begin PBXFileReference section */
 		7C214FF42903763000B1B992 /* uninstall.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = uninstall.sh; sourceTree = "<group>"; };
 		7C214FF52903765700B1B992 /* SMJobBlessUtil3.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = SMJobBlessUtil3.py; sourceTree = "<group>"; };
+		7C6A95AE29037816005CA509 /* SMC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMC.swift; sourceTree = "<group>"; };
+		7C6A95B02903885A005CA509 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		7C984F0F28FF7449003BD80F /* macOSBatteryManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = macOSBatteryManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C984F1228FF7449003BD80F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7C984F1428FF7449003BD80F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7C984F1628FF7449003BD80F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		7C984F1928FF7449003BD80F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7C984F1B28FF7449003BD80F /* macOSBatteryManager.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOSBatteryManager.entitlements; sourceTree = "<group>"; };
 		7C984F2528FF7551003BD80F /* me.alaneuler.mbm.PrivilegeHelper */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = me.alaneuler.mbm.PrivilegeHelper; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C984F2728FF7551003BD80F /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
@@ -102,11 +104,11 @@
 			children = (
 				7C984F1228FF7449003BD80F /* AppDelegate.swift */,
 				7C984F1428FF7449003BD80F /* ViewController.swift */,
-				7C984F1628FF7449003BD80F /* Assets.xcassets */,
-				7C984F1828FF7449003BD80F /* Main.storyboard */,
-				7C984F1B28FF7449003BD80F /* macOSBatteryManager.entitlements */,
 				7C984F3829001882003BD80F /* PrivilegeHelper.swift */,
+				7C6A95B02903885A005CA509 /* main.swift */,
 				7C984F462900C9BA003BD80F /* Info.plist */,
+				7C984F1628FF7449003BD80F /* Assets.xcassets */,
+				7C984F1B28FF7449003BD80F /* macOSBatteryManager.entitlements */,
 			);
 			path = macOSBatteryManager;
 			sourceTree = "<group>";
@@ -114,6 +116,7 @@
 		7C984F2628FF7551003BD80F /* PrivilegeHelper */ = {
 			isa = PBXGroup;
 			children = (
+				7C6A95AE29037816005CA509 /* SMC.swift */,
 				7C984F2728FF7551003BD80F /* main.swift */,
 				7C984F3028FF7E17003BD80F /* PrivilegeHelper.swift */,
 				7C984F422900328B003BD80F /* Info.plist */,
@@ -212,7 +215,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C984F1728FF7449003BD80F /* Assets.xcassets in Resources */,
-				7C984F1A28FF7449003BD80F /* Main.storyboard in Resources */,
 				7C984F472900C9BA003BD80F /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -225,6 +227,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C984F1528FF7449003BD80F /* ViewController.swift in Sources */,
+				7C6A95B12903885A005CA509 /* main.swift in Sources */,
 				7C984F3929001882003BD80F /* PrivilegeHelper.swift in Sources */,
 				7C984F1328FF7449003BD80F /* AppDelegate.swift in Sources */,
 				7C984F372900169D003BD80F /* RemoteApplicationProtocol.swift in Sources */,
@@ -240,23 +243,13 @@
 				7C984F3128FF7E17003BD80F /* PrivilegeHelper.swift in Sources */,
 				7C984F492900D16E003BD80F /* main.swift in Sources */,
 				7C984F362900125B003BD80F /* RemoteApplicationProtocol.swift in Sources */,
+				7C6A95AF29037816005CA509 /* SMC.swift in Sources */,
 				7C984F2E28FF79C9003BD80F /* HelperProtocol.swift in Sources */,
 				7C984F3329000ECC003BD80F /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		7C984F1828FF7449003BD80F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7C984F1928FF7449003BD80F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		7C984F1C28FF7449003BD80F /* Debug */ = {
@@ -387,7 +380,6 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = macOSBatteryManager/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -418,7 +410,6 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = macOSBatteryManager/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

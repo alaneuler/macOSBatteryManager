@@ -1,7 +1,4 @@
 //
-//  PrivilegeHelper.swift
-//  macOSBatteryManager
-//
 //  Created by Alaneuler Erving on 2022/10/19.
 //
 
@@ -54,7 +51,7 @@ class PrivilegeHelper {
         
         connection.invalidationHandler = { [privilegeHelperInstalled] in
             if privilegeHelperInstalled {
-                NSLog("Unable to connect to PrivilegeHelper although it is installe")
+                NSLog("Unable to connect to PrivilegeHelper although it is installed")
             } else {
                 NSLog("PrivilegeHelper is not installed")
             }
@@ -93,7 +90,7 @@ class PrivilegeHelper {
         // Try to install the helper and to load the daemon with authorization
         var error: Unmanaged<CFError>?
         if SMJobBless(kSMDomainSystemLaunchd, Constants.domain as CFString, authRef, &error) == false {
-            logBlessError(error: error!.takeRetainedValue())
+            print(error!.takeRetainedValue())
             return false
         }
         
@@ -101,17 +98,5 @@ class PrivilegeHelper {
         // Release the authorization
         AuthorizationFree(authRef!, [])
         return true
-    }
-    
-    private func logBlessError(error: CFError) {
-        NSLog("Domain: " + CFString2NSString(str: CFErrorGetDomain(error)))
-        NSLog("Code: %d", CFErrorGetCode(error))
-        NSLog("Description: " + CFString2NSString(str: CFErrorCopyDescription(error)))
-        NSLog("Reason: " + CFString2NSString(str: CFErrorCopyFailureReason(error)))
-        NSLog("Suggestion: " + CFString2NSString(str: CFErrorCopyRecoverySuggestion(error)))
-    }
-    
-    private func CFString2NSString(str: CFString) -> String {
-        return (str as NSString) as String
     }
 }
