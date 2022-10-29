@@ -4,7 +4,7 @@
 
 import Foundation
 
-NSLog("Starting helper...")
+Logger.info("Starting helper...")
 
 let privilegeHelper = PrivilegeHelper()
 privilegeHelper.run()

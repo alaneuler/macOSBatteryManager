@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		7C6A95AF29037816005CA509 /* SMC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6A95AE29037816005CA509 /* SMC.swift */; };
 		7C6A95B12903885A005CA509 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6A95B02903885A005CA509 /* main.swift */; };
+		7C7CC828290B5774005E6E6F /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7CC827290B5774005E6E6F /* Logger.swift */; };
+		7C7CC829290B5774005E6E6F /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7CC827290B5774005E6E6F /* Logger.swift */; };
 		7C984F1328FF7449003BD80F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C984F1228FF7449003BD80F /* AppDelegate.swift */; };
 		7C984F1528FF7449003BD80F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C984F1428FF7449003BD80F /* ViewController.swift */; };
 		7C984F1728FF7449003BD80F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C984F1628FF7449003BD80F /* Assets.xcassets */; };
@@ -43,6 +45,7 @@
 		7C214FF52903765700B1B992 /* SMJobBlessUtil3.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = SMJobBlessUtil3.py; sourceTree = "<group>"; };
 		7C6A95AE29037816005CA509 /* SMC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMC.swift; sourceTree = "<group>"; };
 		7C6A95B02903885A005CA509 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		7C7CC827290B5774005E6E6F /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		7C984F0F28FF7449003BD80F /* macOSBatteryManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = macOSBatteryManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C984F1228FF7449003BD80F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7C984F1428FF7449003BD80F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -116,9 +119,9 @@
 		7C984F2628FF7551003BD80F /* PrivilegeHelper */ = {
 			isa = PBXGroup;
 			children = (
-				7C6A95AE29037816005CA509 /* SMC.swift */,
 				7C984F2728FF7551003BD80F /* main.swift */,
 				7C984F3028FF7E17003BD80F /* PrivilegeHelper.swift */,
+				7C6A95AE29037816005CA509 /* SMC.swift */,
 				7C984F422900328B003BD80F /* Info.plist */,
 				7C984F43290032A3003BD80F /* Launchd.plist */,
 			);
@@ -131,6 +134,7 @@
 				7C984F2C28FF79C9003BD80F /* HelperProtocol.swift */,
 				7C984F3229000ECC003BD80F /* Constants.swift */,
 				7C984F352900125B003BD80F /* RemoteApplicationProtocol.swift */,
+				7C7CC827290B5774005E6E6F /* Logger.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -230,6 +234,7 @@
 				7C6A95B12903885A005CA509 /* main.swift in Sources */,
 				7C984F3929001882003BD80F /* PrivilegeHelper.swift in Sources */,
 				7C984F1328FF7449003BD80F /* AppDelegate.swift in Sources */,
+				7C7CC828290B5774005E6E6F /* Logger.swift in Sources */,
 				7C984F372900169D003BD80F /* RemoteApplicationProtocol.swift in Sources */,
 				7C984F2D28FF79C9003BD80F /* HelperProtocol.swift in Sources */,
 				7C984F3429000EE6003BD80F /* Constants.swift in Sources */,
@@ -246,6 +251,7 @@
 				7C6A95AF29037816005CA509 /* SMC.swift in Sources */,
 				7C984F2E28FF79C9003BD80F /* HelperProtocol.swift in Sources */,
 				7C984F3329000ECC003BD80F /* Constants.swift in Sources */,
+				7C7CC829290B5774005E6E6F /* Logger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

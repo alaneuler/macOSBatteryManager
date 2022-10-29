@@ -19,10 +19,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         if let helperProtocolTmp = helperProtocolWrapper {
             self.helperProtocol = helperProtocolTmp
             self.helperProtocol.getVersion { version in
-                NSLog("PrivilegeHelper version: " + version)
+                Logger.info("PrivilegeHelper version: \(version)")
             }
         } else {
-            NSLog("Unable to get connection to PrivilegeHelper!")
+            Logger.error("Unable to get connection to PrivilegeHelper!")
             exit(-2)
         }
     }
@@ -67,10 +67,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             }
             
             if stat {
-                NSLog("Current stat is charging.")
+                Logger.info("Current stat is charging.")
                 completion("Disable Charging", true)
             } else {
-                NSLog("Current stat is non-charging.")
+                Logger.info("Current stat is non-charging.")
                 completion("Enable Charging", true)
             }
         }
@@ -80,7 +80,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     private func toggleSwith(_ sender: NSMenuItem) {
         self.helperProtocol.chargingStat { success, stat in
             if !success {
-                NSLog("Get charging stat failed!")
+                Logger.error("Get charging stat failed!")
                 return
             }
             
@@ -89,7 +89,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                     if result {
                         self.updateSwitchMenuItem(menuItem: sender)
                     } else {
-                        NSLog("Disable charging failed!")
+                        Logger.error("Disable charging failed!")
                     }
                 }
             } else {
@@ -97,7 +97,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                     if result {
                         self.updateSwitchMenuItem(menuItem: sender)
                     } else {
-                        NSLog("Enable charging failed!")
+                        Logger.error("Enable charging failed!")
                     }
                 }
             }

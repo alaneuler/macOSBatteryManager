@@ -5,7 +5,11 @@
 	<key>Label</key>
 	<string>me.alaneuler.mbm.PrivilegeHelper</string>
 	<key>StandardErrorPath</key>
-	<string>/tmp/mbm.helper.log</string>
+	<string>/tmp/mbm.helper.error.log</string>
+	<key>StandardOutPath</key>
+	<string>/tmp/mbm.helper.info.log</string>
+	<key>RunAtLoad</key>
+	<true/>
 	<key>MachServices</key>
 	<dict>
 		<key>me.alaneuler.mbm.PrivilegeHelper</key>

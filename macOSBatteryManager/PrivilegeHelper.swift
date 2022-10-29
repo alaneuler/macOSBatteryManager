@@ -9,14 +9,14 @@ class PrivilegeHelper {
     
     static let INSTANCE = PrivilegeHelper()
     
-    var privilegeHelperInstalled: Bool { FileManager.default.fileExists(atPath: Constants.privilegeHelperPath) }
+    var privilegeHelperInstalled: Bool { FileManager.default.fileExists(atPath: Constants.PRIVILEGE_HELPER_PATH) }
     
     func getRemote() -> HelperProtocol? {
         var proxyError: Error?
         
         let connection = getConnection()
         if connection == nil {
-            NSLog("Unable to get a valid connection to privilegeHelper daemon! Please check.")
+            Logger.error("Unable to get a valid connection to privilegeHelper daemon! Please check.")
             return nil
         }
         
@@ -24,10 +24,10 @@ class PrivilegeHelper {
             proxyError = error
         }) as? HelperProtocol
         
-        if let unwrappedHelper = helper {
-            return unwrappedHelper
+        if let helper {
+            return helper
         } else {
-            NSLog("Unwrap PrivilegeHelper errror: " + (proxyError?.localizedDescription ?? ""))
+            Logger.error("Unwrap PrivilegeHelper errror: \(proxyError?.localizedDescription ?? "Unknown error")")
             return nil
         }
     }
@@ -35,7 +35,7 @@ class PrivilegeHelper {
     private func getConnection() -> NSXPCConnection? {
         if !privilegeHelperInstalled {
             if !installHelper() {
-                NSLog("Install PrivilegeHelper failed! Please check.")
+                Logger.error("Install PrivilegeHelper failed! Please check.")
                 return nil
             }
         }
@@ -44,16 +44,16 @@ class PrivilegeHelper {
     }
     
     private func createConnection() -> NSXPCConnection {
-        let connection = NSXPCConnection(machServiceName: Constants.domain, options: .privileged)
+        let connection = NSXPCConnection(machServiceName: Constants.DOMAIN, options: .privileged)
         connection.remoteObjectInterface = NSXPCInterface(with: HelperProtocol.self)
         connection.exportedInterface = NSXPCInterface(with: RemoteApplicationProtocol.self)
         connection.exportedObject = self
         
         connection.invalidationHandler = { [privilegeHelperInstalled] in
             if privilegeHelperInstalled {
-                NSLog("Unable to connect to PrivilegeHelper although it is installed")
+                Logger.error("Unable to connect to PrivilegeHelper although it is installed")
             } else {
-                NSLog("PrivilegeHelper is not installed")
+                Logger.error("PrivilegeHelper is not installed")
             }
         }
         connection.resume()
@@ -62,7 +62,7 @@ class PrivilegeHelper {
     
     /// Install the Helper in the privileged helper tools folder and load the daemon.
     private func installHelper() -> Bool {
-        NSLog("Start to install PrivilegeHelper...")
+        Logger.info("Start to install PrivilegeHelper...")
         
         // Create an AuthorizationItem to specify we want to bless a privileged Helper
         let authItem = kSMRightBlessPrivilegedHelper.withCString { authorizationString in
@@ -82,15 +82,14 @@ class PrivilegeHelper {
         let flags: AuthorizationFlags = [.interactionAllowed, .extendRights, .preAuthorize]
         let authStatus = AuthorizationCreate(&authRights, nil, flags, &authRef)
         if authStatus != errAuthorizationSuccess {
-            let errorMsg = SecCopyErrorMessageString(authStatus, nil) ?? "" as CFString
-            NSLog(errorMsg as String)
+            Logger.error("Auth for installing helper failed: \(SecCopyErrorMessageString(authStatus, nil) ?? "Unknown error" as CFString)")
             return false
         }
         
         // Try to install the helper and to load the daemon with authorization
         var error: Unmanaged<CFError>?
-        if SMJobBless(kSMDomainSystemLaunchd, Constants.domain as CFString, authRef, &error) == false {
-            print(error!.takeRetainedValue())
+        if SMJobBless(kSMDomainSystemLaunchd, Constants.DOMAIN as CFString, authRef, &error) == false {
+            Logger.error("Install helper failed: \(error!.takeRetainedValue().localizedDescription)")
             return false
         }
         

@@ -5,8 +5,8 @@
 import Foundation
 
 enum Constants {
-    static let domain = "me.alaneuler.mbm.PrivilegeHelper"
+    static let DOMAIN = "me.alaneuler.mbm.PrivilegeHelper"
     
-    static let helperToolsFolder = "/Library/PrivilegedHelperTools/"
-    static let privilegeHelperPath = helperToolsFolder + domain
+    static let HELPER_TOOLS_FOLDER = "/Library/PrivilegedHelperTools/"
+    static let PRIVILEGE_HELPER_PATH = HELPER_TOOLS_FOLDER + DOMAIN
 }

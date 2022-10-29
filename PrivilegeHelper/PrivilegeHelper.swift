@@ -18,62 +18,62 @@ class PrivilegeHelper: NSObject, NSXPCListenerDelegate, HelperProtocol {
         let smcKey = SMCKit.getKey(PrivilegeHelper.CHARGING_KEY_STR, type: DataTypes.UInt8)
         let stat = readSMCBytes(key: smcKey)
         if stat == nil {
-            NSLog("Reading value from SMC failed!")
+            Logger.error("Reading value from SMC failed!")
             completion(false, false)
         } else {
             let val = stat!.0
             let stat = val == 0
             if stat {
-                NSLog("Current is charging")
+                Logger.info("Charging currently.")
             } else {
-                NSLog("Current is not charging")
+                Logger.info("Not charging currently.")
             }
             completion(true, stat)
         }
     }
     
     func disableCharging(then completion: @escaping (Bool) -> Void) {
-        NSLog("Disabling charging...")
+        Logger.info("Disabling charging...")
         
         let smcKey = SMCKit.getKey(PrivilegeHelper.CHARGING_KEY_STR, type: DataTypes.UInt8)
         let oldChargingStat = readSMCBytes(key: smcKey)
         if oldChargingStat != nil {
             let val = oldChargingStat!.0
-            NSLog(String(format: "Old charging stat: %d", val))
+            Logger.info("Old charging stat is \(val)")
             if val == 02 {
-                NSLog("Already in non-charging stat! Skipped.")
+                Logger.warn("Already in non-charging stat! Skipped.")
                 completion(true)
             } else {
                 completion(writeSMCBytes(key: smcKey, bytes: smcBytes(value: 02)))
             }
         } else {
-            NSLog(String(format: "Unable to find SMC key: %s", PrivilegeHelper.CHARGING_KEY_STR))
+            Logger.error("Unable to find SMC key: \(PrivilegeHelper.CHARGING_KEY_STR)")
             completion(false)
         }
         
-        NSLog("Disable charging done.")
+        Logger.info("Disable charging done.")
     }
     
     func enableCharging(then completion: @escaping (Bool) -> Void) {
-        NSLog("Enabling charging...")
+        Logger.info("Enabling charging...")
         
         let smcKey = SMCKit.getKey(PrivilegeHelper.CHARGING_KEY_STR, type: DataTypes.UInt8)
         let oldChargingStat = readSMCBytes(key: smcKey)
         if oldChargingStat != nil {
             let val = oldChargingStat!.0
-            NSLog(String(format: "Old charging stat: %d", val))
+            Logger.info("Old charging stat is \(val)")
             if val == 0 {
-                NSLog("Already in charging stat! Skipped.")
+                Logger.warn("Already in charging stat! Skipped.")
                 completion(true)
             } else {
                 completion(writeSMCBytes(key: smcKey, bytes: smcBytes(value: 00)))
             }
         } else {
-            NSLog(String(format: "Unable to find SMC key: %s", PrivilegeHelper.CHARGING_KEY_STR))
+            Logger.error("Unable to find SMC key: \(PrivilegeHelper.CHARGING_KEY_STR)")
             completion(false)
         }
         
-        NSLog("Enable charging done.")
+        Logger.info("Enable charging done.")
     }
     
     func getVersion(then completion: @escaping (String) -> Void) {
@@ -84,7 +84,7 @@ class PrivilegeHelper: NSObject, NSXPCListenerDelegate, HelperProtocol {
         do {
             return try SMCKit.readData(key)
         } catch {
-            NSLog(error.localizedDescription)
+            Logger.error("Read SMC bytes error: \(error.localizedDescription)")
             return nil
         }
     }
@@ -94,7 +94,7 @@ class PrivilegeHelper: NSObject, NSXPCListenerDelegate, HelperProtocol {
             try SMCKit.writeData(key, data: bytes)
             return true
         } catch {
-            NSLog(error.localizedDescription)
+            Logger.error("Write SMC bytes error: \(error.localizedDescription)")
             return false
         }
     }
@@ -109,22 +109,22 @@ class PrivilegeHelper: NSObject, NSXPCListenerDelegate, HelperProtocol {
     }
     
     private func closeSMC() {
-        NSLog("Closing connection to SMC...")
+        Logger.info("Closing connection to SMC...")
         SMCKit.close()
     }
     
     private func openSMC() {
-        NSLog("Opening connection to SMC...")
+        Logger.info("Opening connection to SMC...")
         do {
             try SMCKit.open()
         } catch {
-            NSLog(error.localizedDescription)
+            Logger.error("Open connection to SMC error: \(error.localizedDescription)")
             exit(-1)
         }
     }
     
     override init() {
-        self.listener = NSXPCListener(machServiceName: Constants.domain)
+        self.listener = NSXPCListener(machServiceName: Constants.DOMAIN)
         super.init()
         self.listener.delegate = self
         
