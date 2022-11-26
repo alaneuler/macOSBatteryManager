@@ -30,6 +30,7 @@ This project is under the MIT License.
 
 ## Used Projects
 - [SMCKit](https://github.com/beltex/SMCKit)
+- [SMJobBlessUtil-python3.py](https://gist.github.com/mikeyh/89a1e2ecc6849ff6056b7391c5216799)
 
 ## Disclaimer
 I do not take any responsibility for any sort of damage in result of using this tool! Although it had no negative side effects for me, macOSBatteryManager still taps in some very low level system functions that are not meant to be tampered with (private APIs).
