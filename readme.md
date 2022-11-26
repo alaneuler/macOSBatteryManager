@@ -3,7 +3,7 @@ To [prolong Li-ion based batteries](https://www.apple.com/batteries/maximizing-p
 
 > Do not use the battery fully, and do not leave the battery at 100% for an extended period of time. The best operating environment for Li-ion batteries is between 30% and 80% power.
 
-However, for those who're using MacBooks as their daily workhourse. Chances are that the batteries are always 100% for a long period of time.
+However, for those who're using MacBooks as their daily workhourse chances are that the batteries are always 100% for a long period of time.
 
 This tiny menu bar tool can help you toggle battery charging state. Supports currently only Application Silicon. After toggling the switch, it may take some time (about 20 seconds or so) for battery status to change. Your battery is in fact already in charging state or non-charging state.
 
