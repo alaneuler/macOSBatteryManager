@@ -12,7 +12,7 @@ This tiny menu bar tool can help you toggle battery charging state. Supports cur
 <img width="328" alt="image" src="https://user-images.githubusercontent.com/8054939/204074570-4e361b83-62a4-4b64-af40-7f2c566ecbf7.png">
 
 ## Uninstalling
-1. Quick the app from menu bar
+1. Quit the app from menu bar
 2. Move macOSBatteryManager.app into Trash
 3. Execute following commands:
 ```bash
